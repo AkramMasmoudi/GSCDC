@@ -1,0 +1,131 @@
+
+
+
+#viewport {
+  padding-left: 250px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.container-fluid {
+  width: 100%;
+  position: relative;
+  margin-right: 0;
+}
+
+/* Sidebar Styles */
+
+#sidebar {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 250px;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #37474F;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar header {
+  background-color: #263238;
+  font-size: 20px;
+  line-height: 52px;
+  padding-left: 1em;
+  min-height : 52px;
+}
+
+#sidebar header a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+
+#sidebar .nav a{
+  background: none;
+  
+  color: #CFD8DC;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+}
+
+#sidebar .nav li:hover{
+  background: #CFD8DC;
+  cursor: pointer;
+}
+#sidebar .nav li:hover a{
+    color: #37474F;
+}
+
+#sidebar .nav li{
+  width: 100%;
+  line-height: 40px;
+  padding-left: 1em;
+  border-bottom: 1px solid #455A64;
+}
+
+.navbar{
+  font-size: 20px;
+  /*line-height: 52px;*/
+  padding-left: 2em;
+  min-height : 52px;
+  color: white;
+  line-height: 1.7;
+}
+.navbar ul li.nav-link {
+  position: relative;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.navbar ul li.nav-link:not(.active):hover {
+  cursor: pointer;
+  border-right: solid 1px #455A64;
+  border-left: solid 1px #455A64;
+}
+.collapse.navbar-collapse:hover{
+  border-bottom: solid 2px #0275d8;
+}
+.navbar .nav-item.nav-link.active:after{
+  display: block;
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: .4em solid transparent;
+    border-right: .4em solid transparent;
+    border-bottom: .4em solid #0275d8;
+    margin-left: -.4em;
+}
+.container-fluid{
+  padding: 1em;
+}
+/*footer*/
+.footer{
+  position: absolute;
+  z-index: 10001;
+  bottom: 0;
+  width: 100%;
+  text-align: end;
+  line-height: 40px;
+  color: #fff;
+  padding-right: 0.5em;
+  background-color: #343a40;
+
+}
+/*fin footer*/
+li a{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.navbar{
+  padding: 0;
+}
