@@ -1,8 +1,6 @@
-
-
-<ag-grid-angular 
-	[style]="gridWith" 
-	class="ag-theme-balham"
-	[rowData]="rowData" 
-	[columnDefs]="columnDefs">
-</ag-grid-angular>
+<app-side-bar></app-side-bar>
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid">
+    <ag-grid-angular [style]="gridWith" class="ag-theme-balham" [rowData]="rowData" [columnDefs]="columnDefs">
+    </ag-grid-angular>
+</div>

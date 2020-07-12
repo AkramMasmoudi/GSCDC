@@ -1,45 +1,70 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('icomoon.eot?wcb7od');
-  src:  url('icomoon.eot?wcb7od#iefix') format('embedded-opentype'),
-    url('icomoon.ttf?wcb7od') format('truetype'),
-    url('icomoon.woff?wcb7od') format('woff'),
-    url('icomoon.svg?wcb7od#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+    font-family: 'icomoon';
+    src: url('icomoon.eot?wcb7od');
+    src: url('icomoon.eot?wcb7od#iefix') format('embedded-opentype'), url('icomoon.ttf?wcb7od') format('truetype'), url('icomoon.woff?wcb7od') format('woff'), url('icomoon.svg?wcb7od#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
- /* speak: never;*/
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    /* speak: never;*/
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-cancel1:before {
-  content: "\e900";
+    content: "\e900";
 }
+
 .icon-trash:before {
-  content: "\e901";
+    content: "\e901";
 }
+
 .icon-add:before {
-  content: "\e902";
+    content: "\e902";
 }
+
 .icon-replay:before {
-  content: "\e903";
+    content: "\e903";
 }
+
 .icon-cancel:before {
-  content: "\e904";
+    content: "\e904";
 }
+
 .icon-next:before {
-  content: "\e905";
+    content: "\e905";
+}
+
+.icon-login .path1:before {
+    content: "\e906";
+    color: #607d8b;
+}
+
+.icon-login .path2:before {
+    content: "\e907";
+    color: #607d8b;
+    margin-left: -1em;
+}
+
+.icon-login .path3:before {
+    content: "\e908";
+    color: #ffc107;
+    margin-left: -1em;
+}
+
+.icon-login .path4:before {
+    content: "\e909";
+    color: #607d8b;
+    margin-left: -1em;
 }
