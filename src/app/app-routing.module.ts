@@ -1,3 +1,4 @@
+import { FournisseurComponent } from './fournisseur/fournisseur.component';
 import { AuthComponent } from './auth/auth.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -12,10 +13,10 @@ const routes: Routes = [
   },{
     path: 'Client',
     component : ClientComponent,
-   // canActivate : [AuthGuard]
+    canActivate : [AuthGuard]
   },{
     path: 'Fournisseur',
-    component : ClientComponent,
+    component : FournisseurComponent,
     canActivate : [AuthGuard]
   },{
     path: 'Produit',

@@ -80,7 +80,7 @@ button {
     box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
     -webkit-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
-    margin: 5px 20px 40px 20px;
+    margin: 5px 20px 20px 20px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -98,6 +98,18 @@ button {
     -o-transform: scale(0.95);
     -ms-transform: scale(0.95);
     transform: scale(0.95);
+}
+
+button:hover,
+button:focus {
+    color: white !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: #39ace7;
+    box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.3s ease 0s;
 }
 
 input[type=text],
@@ -123,7 +135,9 @@ input[type=password] {
 }
 
 input[type=text]:focus,
-input[type=password]:focus {
+input[type=text]:hover,
+input[type=password]:focus,
+input[type=password]:hover {
     background-color: #fff;
     border-bottom: 2px solid #5fbae9;
 }
