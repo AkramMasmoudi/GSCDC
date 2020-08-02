@@ -1,6 +1,6 @@
 <app-side-bar></app-side-bar>
-<app-nav-bar></app-nav-bar>
-<div class="container-fluid">
-    <ag-grid-angular [style]="gridWith" class="ag-theme-balham" [rowData]="rowData" [columnDefs]="columnDefs">
-    </ag-grid-angular>
+<app-nav-bar [navBarElements]="navBarElements" (selectedNav)="onSelectNav($event)"></app-nav-bar>
+<div class="container-fluid" [ngSwitch]="selectedNav">
+    <app-clients-details *ngSwitchCase="'Client'"></app-clients-details>
+    <app-bon-de-livraison-client *ngSwitchCase="'Bon de livraison'"></app-bon-de-livraison-client>
 </div>

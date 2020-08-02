@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,12 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
+  @Input()
+  navBarElements : any ;
+  @Output() 
+  selectedNav = new EventEmitter<string>();
+  
   constructor() { }
 
   ngOnInit(): void {
   }
-  navBarElements = [
+  selectNav(nav: string) {
+    this.selectedNav.emit(nav);
+  }
+  /*navBarElements = [
     {title : "Client",root : '',active : true},
     {title : "Bon de livraison",root : 'Client/Bon de livraison',active : false},
-  ]
+  ]*/
 }

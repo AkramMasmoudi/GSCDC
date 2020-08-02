@@ -11,25 +11,20 @@ export class ClientComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  gridWith = "min-width: 750px; height: calc(100vh - 125px);";
-  columnDefs = [
-		{headerName: 'Nom', field: 'nom',editable : true,sortable: true, filter: true,resizable: true,width : 150 },
-		{headerName: 'Prenom', field: 'prenom',editable : true,sortable: true, filter: true,resizable: true,width : 150 },
-		{headerName: 'Email', field: 'email',editable : true,sortable: true, filter: true,resizable: true,flex : 2},
-		{headerName: 'Tel 1', field: 'tel1',editable : true,sortable: true, filter: true,resizable: true,flex : 1},
-		{headerName: 'Tel 2', field: 'tel2',editable : true,sortable: true, filter: true,resizable: true,flex : 1},
-		{headerName: 'Adresse', field: 'adresse',editable : true,sortable: true, filter: true,resizable: true,flex : 3},
-		{headerName: 'code TVA', field: 'tva',editable : true,sortable: true, filter: true,resizable: true,flex : 1},
-		{headerName: 'code Client', field: 'codeclient',editable : true,sortable: true, filter: true,resizable: true,flex : 1}
-	];
-
-	rowData = [{ nom : "Akram" , 
-				 prenom : "Masmoudi" ,
-				 email : "masmoudiakram14@gamil.com" ,
-				 tel1 : "20765773", 
-				 adresse : "route Lafrane km7 Sfax ",
-				 tva : "xxx",
-				 codeclient : "yyyy"
-				}];
-
+  navBarElements = [
+    {title : "Client",active : true},
+    {title : "Bon de livraison",active : false},
+  ];
+  selectedNav = "Client";
+  onSelectNav(nav: string) {
+	this.selectedNav = nav;
+	for (let index = 0; index < this.navBarElements.length; index++) {
+		let elm = this.navBarElements[index];
+		if(elm.title == nav){
+			this.navBarElements[index].active = true;
+		}else{
+			this.navBarElements[index].active = false;
+		}
+	}
+  }
 }

@@ -13,6 +13,8 @@ import { StorageServiceModule } from 'ngx-webstorage-service';
 import { HttpClientModule } from '@angular/common/http';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { BonDeLivraisonClientComponent } from './client/bon-de-livraison-client/bon-de-livraison-client.component';
+import { ClientsDetailsComponent } from './client/clients-details/clients-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     FournisseurComponent,
     AuthComponent,
     SideBarComponent,
-    NavBarComponent
+    NavBarComponent,
+    BonDeLivraisonClientComponent,
+    ClientsDetailsComponent
   ],
   imports: [
     FormsModule,
