@@ -149,3 +149,7 @@ li a {
 .navbar {
     padding: 0;
 }
+
+button.btn {
+    font-size: 1.2rem;
+}
