@@ -15,6 +15,8 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BonDeLivraisonClientComponent } from './client/bon-de-livraison-client/bon-de-livraison-client.component';
 import { ClientsDetailsComponent } from './client/clients-details/clients-details.component';
+import { LstFournisseursComponent } from './fournisseur/lst-fournisseurs/lst-fournisseurs.component';
+import { BonDeCommandesComponent } from './fournisseur/bon-de-commandes/bon-de-commandes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { ClientsDetailsComponent } from './client/clients-details/clients-detail
     SideBarComponent,
     NavBarComponent,
     BonDeLivraisonClientComponent,
-    ClientsDetailsComponent
+    ClientsDetailsComponent,
+    LstFournisseursComponent,
+    BonDeCommandesComponent
   ],
   imports: [
     FormsModule,
