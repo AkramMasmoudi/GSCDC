@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-lst-fournisseurs',
   templateUrl: './lst-fournisseurs.component.html',
-  styleUrls: ['./lst-fournisseurs.component.css']
+  styleUrls: ['./lst-fournisseurs.component.scss']
 })
 export class LstFournisseursComponent implements OnInit {
 

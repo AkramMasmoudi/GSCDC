@@ -6,6 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
 import { AgGridModule } from 'ag-grid-angular';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 import { BonDeLivraisonComponent } from './bon-de-livraison/bon-de-livraison.component';
 import { FournisseurComponent } from './fournisseur/fournisseur.component';
 import { AuthComponent } from './auth/auth.component';
@@ -37,10 +41,15 @@ import { BonDeCommandesComponent } from './fournisseur/bon-de-commandes/bon-de-c
     AppRoutingModule,
     StorageServiceModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     AgGridModule.withComponents([])
   ],
   providers: [
     AuthService,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   bootstrap: [AppComponent]
 })

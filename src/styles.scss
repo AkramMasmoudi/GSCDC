@@ -3,6 +3,7 @@
 @import "~ag-grid-community/dist/styles/ag-grid.css";
 @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
 @import "fonts/GsApp.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 body {
     background-color: #eee!important;
 }
@@ -152,4 +153,19 @@ li a {
 
 button.btn {
     font-size: 1.2rem;
+}
+
+.input-group .input-group-append {
+    border: 1px solid #ced4da;
+    height: 38px;
+}
+
+.input-group .input-group-append button.mat-icon-button {
+    line-height: 0;
+}
+
+input.total {
+    text-align: center;
+    font-size: 23px;
+    height: 38px;
 }
