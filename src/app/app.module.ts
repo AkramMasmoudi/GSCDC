@@ -21,6 +21,7 @@ import { BonDeLivraisonClientComponent } from './client/bon-de-livraison-client/
 import { ClientsDetailsComponent } from './client/clients-details/clients-details.component';
 import { LstFournisseursComponent } from './fournisseur/lst-fournisseurs/lst-fournisseurs.component';
 import { BonDeCommandesComponent } from './fournisseur/bon-de-commandes/bon-de-commandes.component';
+import { ProduitComponent } from './produit/produit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { BonDeCommandesComponent } from './fournisseur/bon-de-commandes/bon-de-c
     BonDeLivraisonClientComponent,
     ClientsDetailsComponent,
     LstFournisseursComponent,
-    BonDeCommandesComponent
+    BonDeCommandesComponent,
+    ProduitComponent
   ],
   imports: [
     FormsModule,

@@ -24,6 +24,18 @@
     font-size: 20px;
 }
 
+.big-icon [class^="icon-"],
+.big-icon [class*=" icon-"] {
+    margin-right: 0;
+    font-size: 100px;
+}
+
+.icon-btn [class^="icon-"],
+.big-btn [class*=" icon-"] {
+    font-size: 24px;
+    margin-right: 0;
+}
+
 .icon-cancel1:before {
     content: "\e900";
 }

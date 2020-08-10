@@ -1,3 +1,4 @@
+import { ProduitComponent } from './produit/produit.component';
 import { FournisseurComponent } from './fournisseur/fournisseur.component';
 import { AuthComponent } from './auth/auth.component';
 import { NgModule } from '@angular/core';
@@ -20,7 +21,7 @@ const routes: Routes = [
     canActivate : [AuthGuard]
   },{
     path: 'Produit',
-    component : ClientComponent,
+    component : ProduitComponent,
     canActivate : [AuthGuard]
   },{
     path: 'Bon de livraison',
