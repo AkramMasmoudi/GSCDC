@@ -90,3 +90,15 @@
 .icon-search:before {
     content: "\e90b";
 }
+
+.icon-plus:before {
+    content: "\e90c";
+}
+
+.icon-cross:before {
+    content: "\e90d";
+}
+
+.icon-edit:before {
+    content: "\e90e";
+}

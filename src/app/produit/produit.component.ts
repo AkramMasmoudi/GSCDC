@@ -26,4 +26,17 @@ export class ProduitComponent implements OnInit {
 		}
 	}
   }
+  gridWith = "min-width: 750px; height: calc(100vh - 235px);";
+  columnDefs = [
+		{headerName: 'Nom du produit', field: 'nomProd',editable : true,sortable: true, filter: true,resizable: true,flex : 3 },
+		{headerName: 'Unite', field: 'unite',editable : true,sortable: true, filter: true,resizable: true,flex : 1 },
+		{headerName: 'Quantite', field: 'qte',editable : true,sortable: true, filter: true,resizable: true,flex : 1},
+		{headerName: 'Groupe', field: 'grp',editable : true,sortable: true, filter: true,resizable: true,flex : 1},
+		{headerName: 'Prix unitaire', field: 'prixUnitaire',editable : true,sortable: true, filter: true,resizable: true,flex : 1},
+		{headerName: 'Total vente', field: 'totVente',editable : true,sortable: true, filter: true,resizable: true,flex : 1},
+		{headerName: "Prix d'achat", field: 'prixAchat',editable : true,sortable: true, filter: true,resizable: true,flex : 1},
+		{headerName: 'Total achat', field: 'totAchat',editable : true,sortable: true, filter: true,resizable: true,flex : 1}
+	];
+
+	rowData = [];
 }
