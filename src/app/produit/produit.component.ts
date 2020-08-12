@@ -1,5 +1,6 @@
+import { AjoutModifProduitComponent } from './ajout-modif-produit/ajout-modif-produit.component';
 import { Component, OnInit } from '@angular/core';
-
+import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 @Component({
   selector: 'app-produit',
   templateUrl: './produit.component.html',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProduitComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+	  
+	private dialog : MatDialog ) { }
 
   ngOnInit(): void {
   }
@@ -39,4 +42,20 @@ export class ProduitComponent implements OnInit {
 	];
 
 	rowData = [];
+	addProductDialog(){
+		const dialogConfig = new MatDialogConfig();
+
+        dialogConfig.disableClose = true;
+        dialogConfig.autoFocus = true;
+		dialogConfig.height = "auto";
+		dialogConfig.minWidth = 1000;
+		dialogConfig.data = {
+			type: "add",
+			title: "Ajouter un produit"
+		};
+		let dialogRef = this.dialog.open(AjoutModifProduitComponent, dialogConfig);
+		dialogRef.afterClosed().subscribe(
+			data => console.log("Dialog output:", data)
+		); 
+	}
 }

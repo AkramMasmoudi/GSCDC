@@ -9,6 +9,8 @@ import { AgGridModule } from 'ag-grid-angular';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { BonDeLivraisonComponent } from './bon-de-livraison/bon-de-livraison.component';
 import { FournisseurComponent } from './fournisseur/fournisseur.component';
@@ -22,6 +24,7 @@ import { ClientsDetailsComponent } from './client/clients-details/clients-detail
 import { LstFournisseursComponent } from './fournisseur/lst-fournisseurs/lst-fournisseurs.component';
 import { BonDeCommandesComponent } from './fournisseur/bon-de-commandes/bon-de-commandes.component';
 import { ProduitComponent } from './produit/produit.component';
+import { AjoutModifProduitComponent } from './produit/ajout-modif-produit/ajout-modif-produit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +38,8 @@ import { ProduitComponent } from './produit/produit.component';
     ClientsDetailsComponent,
     LstFournisseursComponent,
     BonDeCommandesComponent,
-    ProduitComponent
+    ProduitComponent,
+    AjoutModifProduitComponent
   ],
   imports: [
     FormsModule,
@@ -46,6 +50,8 @@ import { ProduitComponent } from './produit/produit.component';
     BrowserAnimationsModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatDialogModule,
+    DragDropModule,
     AgGridModule.withComponents([])
   ],
   providers: [
@@ -53,6 +59,7 @@ import { ProduitComponent } from './produit/produit.component';
     MatDatepickerModule,
     MatNativeDateModule
   ],
+  entryComponents: [AjoutModifProduitComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -102,3 +102,7 @@
 .icon-edit:before {
     content: "\e90e";
 }
+
+.icon-save:before {
+    content: "\e90f";
+}
