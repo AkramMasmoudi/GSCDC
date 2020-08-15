@@ -27,8 +27,14 @@ label:not(.custom-control-label) {
     text-overflow: ellipsis;
 }
 
+.form-row input.form-control {
+    padding: 0;
+    padding-left: 2px;
+    height: 28px;
+}
+
 .form-row label {
-    padding-top: 0.2em;
+    font-size: 16px;
 }
 
 select {
