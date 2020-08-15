@@ -1,3 +1,4 @@
+import { BonDeLivraisonComponent } from './bon-de-livraison/bon-de-livraison.component';
 import { ProduitComponent } from './produit/produit.component';
 import { FournisseurComponent } from './fournisseur/fournisseur.component';
 import { AuthComponent } from './auth/auth.component';
@@ -25,7 +26,7 @@ const routes: Routes = [
     canActivate : [AuthGuard]
   },{
     path: 'Bon de livraison',
-    component : ClientComponent,
+    component : BonDeLivraisonComponent,
     canActivate : [AuthGuard]
   },{
     path: 'Retour',

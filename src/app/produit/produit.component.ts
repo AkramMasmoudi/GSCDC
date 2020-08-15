@@ -58,4 +58,30 @@ export class ProduitComponent implements OnInit {
 			data => console.log("Dialog output:", data)
 		); 
 	}
+	modifProductDialog(){
+		const dialogConfig = new MatDialogConfig();
+
+        dialogConfig.disableClose = true;
+        dialogConfig.autoFocus = true;
+		dialogConfig.height = "auto";
+		dialogConfig.minWidth = 1000;
+		dialogConfig.data = {
+			type: "add",
+			title: "Ajouter un produit",
+			prodObj : {
+				nomProd : "produit 1",
+				unite : "",
+				qte : "10",
+				grp : "",
+				prixUnitaire : "11",
+				totVente : "12",
+				prixAchat : "13",
+				totAchat : "14",
+			}
+		};
+		let dialogRef = this.dialog.open(AjoutModifProduitComponent, dialogConfig);
+		dialogRef.afterClosed().subscribe(
+			data => console.log("Dialog output:", data)
+		); 
+	}
 }

@@ -11,5 +11,18 @@ export class BonDeLivraisonComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  navBarElements = [
+  ];
+  selectedNav = "";
+  onSelectNav(nav: string) {
+	this.selectedNav = nav;
+	for (let index = 0; index < this.navBarElements.length; index++) {
+		let elm = this.navBarElements[index];
+		if(elm.title == nav){
+			this.navBarElements[index].active = true;
+		}else{
+			this.navBarElements[index].active = false;
+		}
+	}
+  }
 }

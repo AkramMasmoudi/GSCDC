@@ -25,6 +25,9 @@ import { LstFournisseursComponent } from './fournisseur/lst-fournisseurs/lst-fou
 import { BonDeCommandesComponent } from './fournisseur/bon-de-commandes/bon-de-commandes.component';
 import { ProduitComponent } from './produit/produit.component';
 import { AjoutModifProduitComponent } from './produit/ajout-modif-produit/ajout-modif-produit.component';
+import { HistoProdComponent } from './produit/histo-prod/histo-prod.component';
+import { NouvGrpComponent } from './produit/nouv-grp/nouv-grp.component';
+import { NouvInvComponent } from './produit/nouv-inv/nouv-inv.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +42,10 @@ import { AjoutModifProduitComponent } from './produit/ajout-modif-produit/ajout-
     LstFournisseursComponent,
     BonDeCommandesComponent,
     ProduitComponent,
-    AjoutModifProduitComponent
+    AjoutModifProduitComponent,
+    HistoProdComponent,
+    NouvGrpComponent,
+    NouvInvComponent
   ],
   imports: [
     FormsModule,

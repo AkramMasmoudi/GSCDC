@@ -10,7 +10,7 @@
         <!-- Login Form -->
         <form>
             <label *ngIf="showMsg" class="danger text-danger w-100 " style="font-size: 17px;"> {{errMsg}} </label>
-            <input type="text" autocomplete="off" id="login" class="fadeIn second" [(ngModel)]="user.id" name="login" placeholder="login">
+            <input type="text" autofocus autocomplete="off" id="login" class="fadeIn second" [(ngModel)]="user.id" name="login" placeholder="login">
             <input type="password" id="password" class="fadeIn third" name="login" [(ngModel)]="user.password" placeholder="password">
             <button class="fadeIn fourth" type="button" (click)="checkPwd()">Log In</button>
         </form>
