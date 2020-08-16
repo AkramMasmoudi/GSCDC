@@ -6,14 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bon-de-livraison.component.scss']
 })
 export class BonDeLivraisonComponent implements OnInit {
-
+  methPaiement : string;
   constructor() { }
 
   ngOnInit(): void {
+   this.methPaiement = "M";
   }
   navBarElements = [
   ];
   selectedNav = "";
+  
   onSelectNav(nav: string) {
 	  this.selectedNav = nav;
   }
@@ -26,5 +28,6 @@ export class BonDeLivraisonComponent implements OnInit {
 		{headerName: 'Montant TTC', field: 'montant',editable : true,sortable: true, filter: true,resizable: true,flex : 1},
 	];
 
-	rowData = [];
+  rowData = [];
+  
 }
