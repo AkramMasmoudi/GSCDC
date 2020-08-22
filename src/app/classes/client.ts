@@ -1,10 +1,11 @@
 export class Client {
-    email: string;
-    password: string;
-    nom : string; 
-    prenom : string;
-    tel1 : string; 
+    ctcID : Number;
+    title : string;
+    prenom : string;//firstName
+    nom : string;//lastName
+    tel1 : string;
+    tel2 : string;
     adresse : string;
     tva : string;
-    codeclient : string;
+    email: string;
 }

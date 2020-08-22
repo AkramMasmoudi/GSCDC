@@ -20,7 +20,7 @@ export class ClientsDetailsComponent implements OnInit {
 		{headerName: 'Tel 2', field: 'tel2',editable : true,sortable: true, filter: true,resizable: true,flex : 1},
 		{headerName: 'Adresse', field: 'adresse',editable : true,sortable: true, filter: true,resizable: true,flex : 3},
 		{headerName: 'code TVA', field: 'tva',editable : true,sortable: true, filter: true,resizable: true,flex : 1},
-		{headerName: 'code Client', field: 'codeclient',editable : true,sortable: true, filter: true,resizable: true,flex : 1}
+		{headerName: 'code Client', field: 'ctcID',editable : true,sortable: true, filter: true,resizable: true,flex : 1}
 	];
 
 	rowData = [{ nom : "Akram" , 
@@ -29,7 +29,7 @@ export class ClientsDetailsComponent implements OnInit {
 				 tel1 : "20765773", 
 				 adresse : "route Lafrane km7 Sfax ",
 				 tva : "xxx",
-				 codeclient : "yyyy"
+				 ctcID : "01"
 				}];
   
 }

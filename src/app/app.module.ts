@@ -28,6 +28,7 @@ import { AjoutModifProduitComponent } from './produit/ajout-modif-produit/ajout-
 import { HistoProdComponent } from './produit/histo-prod/histo-prod.component';
 import { NouvGrpComponent } from './produit/nouv-grp/nouv-grp.component';
 import { NouvInvComponent } from './produit/nouv-inv/nouv-inv.component';
+import { RetourComponent } from './retour/retour.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,8 @@ import { NouvInvComponent } from './produit/nouv-inv/nouv-inv.component';
     AjoutModifProduitComponent,
     HistoProdComponent,
     NouvGrpComponent,
-    NouvInvComponent
+    NouvInvComponent,
+    RetourComponent
   ],
   imports: [
     FormsModule,
