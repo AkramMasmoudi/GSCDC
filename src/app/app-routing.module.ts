@@ -1,3 +1,7 @@
+import { BonDeLivraisonFournisseurComponent } from './bon-de-livraison-fournisseur/bon-de-livraison-fournisseur.component';
+import { RecetteComponent } from './recette/recette.component';
+import { EcheanceDesChequesComponent } from './echeance-des-cheques/echeance-des-cheques.component';
+import { DevieComponent } from './devie/devie.component';
 import { RetourComponent } from './retour/retour.component';
 import { BonDeLivraisonComponent } from './bon-de-livraison/bon-de-livraison.component';
 import { ProduitComponent } from './produit/produit.component';
@@ -34,20 +38,20 @@ const routes: Routes = [
     component : RetourComponent,
     canActivate : [AuthGuard]
   },{
-    path: 'Devis',
-    component : ClientComponent,
+    path: 'Devie',
+    component : DevieComponent,
     canActivate : [AuthGuard]
   },{
     path: 'Echeance des cheques',
-    component : ClientComponent,
+    component : EcheanceDesChequesComponent,
     canActivate : [AuthGuard]
   },{
     path: 'Recette',
-    component : ClientComponent,
+    component : RecetteComponent,
     canActivate : [AuthGuard]
   },{
     path: 'Bon de livraison Fournisseur',
-    component : ClientComponent,
+    component : BonDeLivraisonFournisseurComponent,
     canActivate : [AuthGuard]
   },
   

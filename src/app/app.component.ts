@@ -13,6 +13,5 @@ export class AppComponent {
   isAuthenticated = this.authService.isAuthenticated();
   title = 'gs-app';
   
-  
 
 }

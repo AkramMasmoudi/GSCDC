@@ -13,6 +13,7 @@ export class AuthService {
     }
     signIn(user : User ){
         this.storageService.set('user',user)
+        this.isAuth = true;
     }
 
     signOut(){

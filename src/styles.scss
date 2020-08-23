@@ -29,8 +29,13 @@ label:not(.custom-control-label) {
 
 .form-row input.form-control {
     padding: 0;
-    padding-left: 2px;
+    padding-left: 0.55rem;
     height: 28px;
+}
+
+.form-row select.form-control,
+.form-row textarea.form-control {
+    padding-left: 0.55rem;
 }
 
 .form-row label {

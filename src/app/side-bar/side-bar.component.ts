@@ -21,7 +21,7 @@ export class SideBarComponent implements OnInit {
     {title : "Produit",root : '/Produit'},
     {title : "Bon de livraison",root : '/Bon de livraison'},
     {title : "Retour",root : '/Retour'},
-    {title : "Devis",root : '/Devis'},
+    {title : "Devie",root : '/Devie'},
     {title : "Echeance des cheques",root : '/Echeance des cheques'},
     {title : "Recette",root : '/Recette'},
     {title : "Bon de livraison Fournisseur",root : '/Bon de livraison Fournisseur'},

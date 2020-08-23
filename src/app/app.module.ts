@@ -29,6 +29,10 @@ import { HistoProdComponent } from './produit/histo-prod/histo-prod.component';
 import { NouvGrpComponent } from './produit/nouv-grp/nouv-grp.component';
 import { NouvInvComponent } from './produit/nouv-inv/nouv-inv.component';
 import { RetourComponent } from './retour/retour.component';
+import { DevieComponent } from './devie/devie.component';
+import { EcheanceDesChequesComponent } from './echeance-des-cheques/echeance-des-cheques.component';
+import { RecetteComponent } from './recette/recette.component';
+import { BonDeLivraisonFournisseurComponent } from './bon-de-livraison-fournisseur/bon-de-livraison-fournisseur.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +51,11 @@ import { RetourComponent } from './retour/retour.component';
     HistoProdComponent,
     NouvGrpComponent,
     NouvInvComponent,
-    RetourComponent
+    RetourComponent,
+    DevieComponent,
+    EcheanceDesChequesComponent,
+    RecetteComponent,
+    BonDeLivraisonFournisseurComponent
   ],
   imports: [
     FormsModule,
