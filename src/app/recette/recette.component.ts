@@ -12,7 +12,7 @@ export class RecetteComponent implements OnInit {
   ngOnInit(): void {
   }
   today = new Date();
-  
+  menu = "Recette";
   gridWith = "min-width: 750px; height: calc(100vh - 175px);";
   columnDefs = [
 		{headerName: 'Bon de livraison N°', field: 'numeroBdL',editable : true,sortable: true, filter: true,resizable: true,flex : 1 },

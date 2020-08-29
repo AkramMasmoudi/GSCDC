@@ -11,6 +11,7 @@ export class ClientComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  menu = "Client";
   navBarElements = [
     {title : "Client",active : true},
     {title : "Bon de livraison",active : false},

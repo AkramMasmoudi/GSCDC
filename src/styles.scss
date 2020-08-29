@@ -33,6 +33,12 @@ label:not(.custom-control-label) {
     height: 28px;
 }
 
+.form-row select.form-control {
+    padding-left: 0.55rem;
+    height: 28px;
+    background-position: calc(100% - 20px) calc(1em - 5px), calc(100% - 15px) calc(1em - 5px), 100% 0;
+}
+
 .form-row select.form-control,
 .form-row textarea.form-control {
     padding-left: 0.55rem;

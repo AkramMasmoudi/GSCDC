@@ -1,4 +1,4 @@
-<app-side-bar></app-side-bar>
+<app-side-bar [currentMenu]="menu"></app-side-bar>
 <app-nav-bar [navBarElements]="navBarElements" (selectedNav)="onSelectNav($event)"></app-nav-bar>
 <div class="container-fluid" [ngSwitch]="selectedNav">
     <app-clients-details *ngSwitchCase="'Client'"></app-clients-details>

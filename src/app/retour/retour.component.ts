@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class RetourComponent implements OnInit {
 
   constructor() { }
-
+  menu = "Retour";
   ngOnInit(): void {
   }
 

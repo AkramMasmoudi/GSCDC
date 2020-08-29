@@ -1,4 +1,6 @@
 import { AuthService } from './services/auth.service';
+import { CommonService } from './services/common.service';
+
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -72,6 +74,7 @@ import { BonDeLivraisonFournisseurComponent } from './bon-de-livraison-fournisse
   ],
   providers: [
     AuthService,
+    CommonService,
     MatDatepickerModule,
     MatNativeDateModule
   ],

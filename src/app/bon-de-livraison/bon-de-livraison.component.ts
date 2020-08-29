@@ -12,6 +12,7 @@ export class BonDeLivraisonComponent implements OnInit {
   ngOnInit(): void {
    this.methPaiement = "M";
   }
+  menu = "Bon de livraison";
   navBarElements = [
   ];
   selectedNav = "";

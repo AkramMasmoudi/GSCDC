@@ -11,6 +11,7 @@ export class FournisseurComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  menu = "Fournisseur";
   navBarElements = [
     {title : "Fournisseurs",active : true},
     {title : "Bon de commandes",active : false},

@@ -11,6 +11,7 @@ export class EcheanceDesChequesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  menu = "Echeance des cheques";
   today = new Date();
   total = 0;
   gridWith = "width: 100%; height: calc(100vh - 125px);";

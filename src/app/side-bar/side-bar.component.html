@@ -3,7 +3,7 @@
         <a href="#">Casa Del Ceramico</a>
     </header>
     <ul class="nav">
-        <li *ngFor="let elem of sideBarElements" attr.id="{{elem.title}}" (click)="goTo(elem.root)">
+        <li *ngFor="let elem of sideBarElements" [className]="elem.active?'active':''" attr.id="{{elem.title}}" (click)="goTo(elem.root)">
             <a>
           {{ elem.title }}
         </a>

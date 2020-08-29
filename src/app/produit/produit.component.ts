@@ -17,6 +17,7 @@ export class ProduitComponent implements OnInit {
   navBarElements = [
     {title : "Produit",active : true}
   ];
+  menu = "Produit";
   selectedNav = "Produit";
   onSelectNav(nav: string) {
 	this.selectedNav = nav;
