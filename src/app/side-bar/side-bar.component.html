@@ -1,12 +1,13 @@
-<div id="sidebar">
-    <header>
-        <a href="#">Casa Del Ceramico</a>
+<div id="sidebar" class="side-bar-opened">
+    <header class=" header d-flex align-items-center justify-content-between">
+
+        <div class="header-title">Casa Del Ceramico</div>
+        <i id="sideBarIcon" (click)="sideBarClick()" class="icon-arrow-to-left"></i>
+
     </header>
     <ul class="nav">
         <li *ngFor="let elem of sideBarElements" [className]="elem.active?'active':''" attr.id="{{elem.title}}" (click)="goTo(elem.root)">
-            <a>
-          {{ elem.title }}
-        </a>
+            <a><i [className]="'icon-'+elem.icon" [title]="elem.title"></i> <span class="li-title">{{ elem.title }} </span></a>
         </li>
 
     </ul>

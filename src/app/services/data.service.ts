@@ -28,7 +28,8 @@ export class DataService {
     return this.httpClient.post(Config.BaseUrl + 'clients',client);
   }
   updateClient(client : Client){
-    return this.httpClient.put(Config.BaseUrl + 'clients/'+ client.ctcID,client);
+    
+    return this.httpClient.post(Config.BaseUrl + '/client/modif',client);
   }
 
   /* fin client */

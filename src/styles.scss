@@ -4,6 +4,14 @@
 @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
 @import "fonts/GsApp.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/*variables*/
+
+$bar-padding1: 270px;
+$bar-padding2: 90px;
+
+/*end variales*/
+
 body {
     background-color: #eee!important;
 }
@@ -76,11 +84,15 @@ select {
 }
 
 #viewport .container-fluid {
-    padding-left: 270px;
+    padding-left: $bar-padding2;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+#viewport.opened .container-fluid {
+    padding-left: $bar-padding1;
 }
 
 .container-fluid {
@@ -95,17 +107,31 @@ select {
 #sidebar {
     z-index: 1000;
     position: fixed;
-    left: 250px;
     top: 0;
     width: 250px;
     height: 100%;
-    margin-left: -250px;
     overflow-y: auto;
     background: #37474F;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+#sidebar.side-bar-closed {
+    width: 75px;
+}
+
+#sidebar.side-bar-opened .nav li i {
+    display: none;
+}
+
+#sidebar.side-bar-closed .nav .li-title {
+    display: none;
+}
+
+#sidebar.side-bar-closed header .header-title {
+    display: none;
 }
 
 #sidebar header {
@@ -116,10 +142,22 @@ select {
     min-height: 52px;
 }
 
-#sidebar header a {
+#sidebar header i {
+    cursor: pointer;
+}
+
+#sidebar .header-title {
+    white-space: nowrap;
+}
+
+#sidebar header.header {
     color: #fff;
-    display: block;
+    //display: block;
     text-decoration: none;
+}
+
+.opened li.active a {
+    text-decoration: underline;
 }
 
 #sidebar .nav a {
@@ -144,6 +182,14 @@ select {
     line-height: 40px;
     padding-left: 1em;
     border-bottom: 1px solid #455A64;
+}
+
+#sidebar.side-bar-closed .nav li {
+    padding-top: 0.5em;
+}
+
+#sidebar.side-bar-closed .nav i {
+    font-size: 33px;
 }
 
 .navbar {
@@ -184,6 +230,14 @@ select {
     border-right: .4em solid transparent;
     border-bottom: .4em solid #0275d8;
     margin-left: -.4em;
+}
+
+.navbar .collapse.navbar-collapse {
+    padding-left: $bar-padding2;
+}
+
+#viewport.opened .navbar .collapse.navbar-collapse {
+    padding-left: $bar-padding1;
 }
 
 .container-fluid {
@@ -348,6 +402,127 @@ i.material-icons:hover {
     cursor: pointer;
     box-shadow: none;
 }
+
+
+/*** animate Loading css ***/
+
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    left: 45%;
+    top: 45%;
+}
+
+.lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #bd2130;
+    margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+}
+
+@keyframes lds-roller {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-div {
+    position: absolute;
+    top: 0%;
+    //left: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999;
+}
+
+
+/*** fin animate Loading css ***/
 
 
 /**/

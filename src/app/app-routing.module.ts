@@ -38,7 +38,7 @@ const routes: Routes = [
     component : RetourComponent,
     canActivate : [AuthGuard]
   },{
-    path: 'Devie',
+    path: 'Devis',
     component : DevieComponent,
     canActivate : [AuthGuard]
   },{

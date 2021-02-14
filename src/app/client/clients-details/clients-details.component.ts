@@ -1,6 +1,8 @@
+import { CommonService } from './../../services/common.service';
 import { Client } from './../../classes/client';
 import { DataService } from './../../services/data.service';
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-clients-details',
@@ -9,13 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientsDetailsComponent implements OnInit {
 
-  constructor(private dataservice : DataService) { }
-  clients : any[] = [];
+  constructor(private dataservice : DataService,
+	          private commonService : CommonService) { }
+  private gridApi;
+  private gridColumnApi; 
+   clients : any[] = [];
+  private selclient : Client = new Client() ;
+  private maxCtcID : number;
   ngOnInit(): void {
 		
 	this.dataservice.getAllClients()
 	.subscribe((data) => {
-		console.log("data !!! =>",data)
 		this.clients = data;
 	});
 
@@ -24,7 +30,7 @@ export class ClientsDetailsComponent implements OnInit {
   gridWith = "min-width: 750px; height: calc(100vh - 125px);";
  
   columnDefs = [
-		{headerName: 'id', field: 'CtcID',editable : true,sortable: true, filter: true,resizable: true,width : 55},
+		{headerName: 'N°', field: 'CtcID',editable : false,sortable: true, filter: true,resizable: true,width : 55},
 		{headerName: 'Nom', field: 'LastName',editable : true,sortable: true, filter: true,resizable: true,width : 150 },
 		{headerName: 'Prenom', field: 'FirstName',editable : true,sortable: true, filter: true,resizable: true,width : 150 },
 		{headerName: 'Email', field: 'Email',editable : true,sortable: true, filter: true,resizable: true,flex : 2},
@@ -34,6 +40,99 @@ export class ClientsDetailsComponent implements OnInit {
 		{headerName: 'code TVA', field: 'CodeTVA',editable : true,sortable: true, filter: true,resizable: true,flex : 1}
 	];
 	cellValueChanged(ev): void{
-		console.log(ev,this.clients);
+		
+		this.selclient.CtcID = ev.data.CtcID
+		this.selclient.Address = ev.data.Address
+		this.selclient.CodeTVA = ev.data.CodeTVA
+		this.selclient.Email = ev.data.Email		
+		this.selclient.FirstName = ev.data.FirstName
+		this.selclient.LastName = ev.data.LastName
+		this.selclient.MobilePhone = ev.data.MobilePhone
+		this.selclient.MobilePhone2 = ev.data.MobilePhone2
+		this.dataservice.updateClient(this.selclient).subscribe((data) => {
+			
+		});
 	}   
+	deleteClient(){
+		let selData = this.getSelectedRowData();
+		if(selData && selData.length == 1)
+			this.commonService.askmess('Confirmez vous la suppression?',selData[0].FirstName+" "+selData[0].LastName,function () {
+				Swal.fire(
+					'Removed!',
+					'Client removed successfully.',
+					'success'
+				  )	
+			},function () {
+				Swal.fire(
+					'not Removed!',
+					'Client not removed.',
+					'error'
+				  )
+			})
+		/*Swal.fire({
+			title: 'Confirmez vous la suppression?',
+			text: selData[0].FirstName+" "+selData[0].LastName,
+			icon: 'question',
+			showCancelButton: true,
+			confirmButtonText: 'OK',
+			cancelButtonText: 'Annuler',
+			backdrop : true,
+			allowOutsideClick : false,
+			allowEscapeKey : false,
+			width : "35rem",
+			padding : "1.05rem"
+		  }).then((result) => {
+			if (result.value) {
+			 
+			 Swal.fire(
+				'Removed!',
+				'Product removed successfully.',
+				'success'
+			  )
+			}
+		  })*/
+	}
+	addNewClient() : void{
+		this.dataservice.getAllClients()
+		.subscribe((data) => {
+			
+			this.clients = data;
+			this.maxCtcID = 1;
+			data.forEach(clt => {
+				if(this.maxCtcID < clt.CtcID) 
+					this.maxCtcID = clt.CtcID
+			});
+			this.selclient = new Client();
+			this.selclient.CtcID = this.maxCtcID+1;
+			this.clients.push(this.selclient);
+			this.dataservice.addClient(this.selclient)
+			.subscribe((data2) => {
+			})
+			
+		
+		});
+	}
+
+ 	onGridReady(params) {
+
+		this.gridApi = params.api;
+		this.gridColumnApi = params.columnApi;
+		
+	}
+	onRowDataChanged(){
+		if(this.gridApi)
+		this.gridApi.forEachNode(node => {
+			if ( node.data.CtcID === this.selclient.CtcID ) {
+				node.setSelected( true );
+				this.gridApi.ensureNodeVisible(node, "bottom");
+				this.gridApi.setFocusedCell(node.childIndex, "LastName", null);
+				console.log(node,node.index)
+			}
+		});
+	}	
+ 	getSelectedRowData() {
+		let selectedNodes = this.gridApi.getSelectedNodes();
+		let selectedData = selectedNodes.map(node => node.data);
+		return selectedData;
+	} 
 }

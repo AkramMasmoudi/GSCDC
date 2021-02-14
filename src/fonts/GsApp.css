@@ -106,3 +106,47 @@
 .icon-save:before {
     content: "\e90f";
 }
+
+.icon-bon-livraison3:before {
+    content: "\e910";
+}
+
+.icon-devis:before {
+    content: "\e911";
+}
+
+.icon-fournisseur:before {
+    content: "\e912";
+}
+
+.icon-produit:before {
+    content: "\e913";
+}
+
+.icon-recette:before {
+    content: "\e914";
+}
+
+.icon-retour:before {
+    content: "\e915";
+}
+
+.icon-bon-livraison1:before {
+    content: "\e916";
+}
+
+.icon-cheque:before {
+    content: "\e917";
+}
+
+.icon-client:before {
+    content: "\e918";
+}
+
+.icon-arrow-to-left:before {
+    content: "\e919";
+}
+
+.icon-arrow-to-right:before {
+    content: "\e91a";
+}
