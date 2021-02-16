@@ -1,3 +1,4 @@
+import { Client } from './../classes/client';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,6 +12,7 @@ export class ClientComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  client : Client;
   menu = "Client";
   navBarElements = [
     {title : "Client",active : true},
@@ -27,5 +29,10 @@ export class ClientComponent implements OnInit {
 			this.navBarElements[index].active = false;
 		}
 	}
+  }
+
+  clientChangedHandler(clt: Client) {
+    console.log("clientChangedHandler",clt);
+    this.client = clt;
   }
 }

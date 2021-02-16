@@ -1,6 +1,7 @@
 <div class="row mb-1">
     <div class="col-11 pr-0" id="clientGrid">
-        <ag-grid-angular rowSelection="single" (rowDataChanged)="onRowDataChanged()" (gridReady)="onGridReady($event)" (cellValueChanged)="cellValueChanged($event)" [style]="gridWith" class="ag-theme-balham" [rowData]="clients" [columnDefs]="columnDefs">
+        <ag-grid-angular rowSelection="single" (selectionChanged)="rowClicked()" (rowDataChanged)="onRowDataChanged()" (gridReady)="onGridReady($event)" (cellValueChanged)="cellValueChanged($event)" [style]="gridWith" class="ag-theme-balham" [rowData]="clients"
+            [columnDefs]="columnDefs">
         </ag-grid-angular>
 
     </div>

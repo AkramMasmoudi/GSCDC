@@ -6,8 +6,8 @@
 
     </header>
     <ul class="nav">
-        <li *ngFor="let elem of sideBarElements" [className]="elem.active?'active':''" attr.id="{{elem.title}}" (click)="goTo(elem.root)">
-            <a><i [className]="'icon-'+elem.icon" [title]="elem.title"></i> <span class="li-title">{{ elem.title }} </span></a>
+        <li *ngFor="let elem of sideBarElements" [title]="elem.title" [className]="elem.active?'active':''" attr.id="{{elem.title}}" (click)="goTo(elem.root)">
+            <a><i [className]="'icon-'+elem.icon" ></i> <span class="li-title">{{ elem.title }} </span></a>
         </li>
 
     </ul>

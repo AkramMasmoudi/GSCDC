@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Client } from './../../classes/client';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bon-de-livraison-client',
@@ -10,8 +11,10 @@ export class BonDeLivraisonClientComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+	  console.log("ngoninit",this.client)
   }
-  gridWith = "min-width: 750px; height: calc(100vh - 175px);";
+  @Input() client : Client;
+  gridWith = "min-width: 730px; height: calc(100vh - 195px);";
   columnDefs = [
 		{headerName: 'Bon de livraison N°', field: 'numeroBdL',editable : true,sortable: true, filter: true,resizable: true,flex : 1 },
 		{headerName: 'Facture N°', field: 'numeroF',editable : true,sortable: true, filter: true,resizable: true,flex : 1 },
