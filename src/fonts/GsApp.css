@@ -150,3 +150,7 @@
 .icon-arrow-to-right:before {
     content: "\e91a";
 }
+
+.icon-param:before {
+    content: "\e91b";
+}

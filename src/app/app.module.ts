@@ -35,6 +35,7 @@ import { DevieComponent } from './devie/devie.component';
 import { EcheanceDesChequesComponent } from './echeance-des-cheques/echeance-des-cheques.component';
 import { RecetteComponent } from './recette/recette.component';
 import { BonDeLivraisonFournisseurComponent } from './bon-de-livraison-fournisseur/bon-de-livraison-fournisseur.component';
+import { ParametrageComponent } from './parametrage/parametrage.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +58,8 @@ import { BonDeLivraisonFournisseurComponent } from './bon-de-livraison-fournisse
     DevieComponent,
     EcheanceDesChequesComponent,
     RecetteComponent,
-    BonDeLivraisonFournisseurComponent
+    BonDeLivraisonFournisseurComponent,
+    ParametrageComponent
   ],
   imports: [
     FormsModule,

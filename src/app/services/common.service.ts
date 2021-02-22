@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 export class CommonService {
 
   constructor() { }
-
+  sideBar = "maxi";	
   askmess(question:string,detail:string,okfn:any,nofn:any): void{
     
     Swal.fire({
@@ -58,5 +58,12 @@ stopAnimateLoading(id : string) :void{
 		id.replace("#","");
 	}
 	$("#"+id+" .loader-div").remove()
+}
+
+getEtatSideBar(){
+	return this.sideBar;
+}
+setEtatSideBar(sideBar : string){
+	this.sideBar = sideBar;
 }
 }

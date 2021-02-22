@@ -11,7 +11,7 @@ export class DevieComponent implements OnInit {
   total = 0;
   ngOnInit(): void {
   }
-  menu = "Devie";
+  menu = "Devis";
   gridWith = "width: 100%; height: calc(100vh - 125px);";
   columnDefs = [
 		{headerName: 'Quantité', field: 'qte',editable : true,sortable: true, filter: true,resizable: true,width : 90 },

@@ -1,3 +1,4 @@
+import { ParametrageComponent } from './parametrage/parametrage.component';
 import { BonDeLivraisonFournisseurComponent } from './bon-de-livraison-fournisseur/bon-de-livraison-fournisseur.component';
 import { RecetteComponent } from './recette/recette.component';
 import { EcheanceDesChequesComponent } from './echeance-des-cheques/echeance-des-cheques.component';
@@ -52,6 +53,10 @@ const routes: Routes = [
   },{
     path: 'Bon de livraison Fournisseur',
     component : BonDeLivraisonFournisseurComponent,
+    canActivate : [AuthGuard]
+  },{
+    path: 'Parametrage',
+    component : ParametrageComponent,
     canActivate : [AuthGuard]
   },
   
