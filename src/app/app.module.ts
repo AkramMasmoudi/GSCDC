@@ -36,6 +36,8 @@ import { EcheanceDesChequesComponent } from './echeance-des-cheques/echeance-des
 import { RecetteComponent } from './recette/recette.component';
 import { BonDeLivraisonFournisseurComponent } from './bon-de-livraison-fournisseur/bon-de-livraison-fournisseur.component';
 import { ParametrageComponent } from './parametrage/parametrage.component';
+import { PrintLayoutComponent } from './print-layout/print-layout.component';
+import { FactureComponent } from './print-layout/facture/facture.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +61,9 @@ import { ParametrageComponent } from './parametrage/parametrage.component';
     EcheanceDesChequesComponent,
     RecetteComponent,
     BonDeLivraisonFournisseurComponent,
-    ParametrageComponent
+    ParametrageComponent,
+    PrintLayoutComponent,
+    FactureComponent
   ],
   imports: [
     FormsModule,

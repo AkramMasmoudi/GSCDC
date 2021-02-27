@@ -12,6 +12,15 @@ $bar-padding2: 90px;
 
 /*end variales*/
 
+@media print {
+    .isPrinting>* {
+        display: none;
+    }
+    .isPrinting app-print-layout {
+        display: block;
+    }
+}
+
 body {
     background-color: #eee!important;
 }

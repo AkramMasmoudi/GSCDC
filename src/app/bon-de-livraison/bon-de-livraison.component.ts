@@ -1,3 +1,4 @@
+import { PrintService } from './../services/print.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BonDeLivraisonComponent implements OnInit {
   methPaiement : string;
-  constructor() { }
+  constructor(private printService : PrintService) { }
 
   ngOnInit(): void {
    this.methPaiement = "M";
@@ -30,5 +31,7 @@ export class BonDeLivraisonComponent implements OnInit {
 	];
 
   rowData = [];
-  
+  imprimFacture(){
+    this.printService.printDocument("facture",['1']);
+  }
 }
