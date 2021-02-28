@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FactureComponent } from './facture.component';
+import { FactureLayoutComponent } from './facture-layout.component';
 
-describe('FactureComponent', () => {
-  let component: FactureComponent;
-  let fixture: ComponentFixture<FactureComponent>;
+describe('FactureLayoutComponent', () => {
+  let component: FactureLayoutComponent;
+  let fixture: ComponentFixture<FactureLayoutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FactureComponent ]
+      declarations: [ FactureLayoutComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FactureComponent);
+    fixture = TestBed.createComponent(FactureLayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

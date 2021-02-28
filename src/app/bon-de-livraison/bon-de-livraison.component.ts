@@ -1,6 +1,5 @@
 import { PrintService } from './../services/print.service';
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-bon-de-livraison',
   templateUrl: './bon-de-livraison.component.html',
@@ -29,7 +28,6 @@ export class BonDeLivraisonComponent implements OnInit {
 		{headerName: 'Remise', field: 'remise',editable : true,sortable: true, filter: true,resizable: true,width : 80},
 		{headerName: 'Montant TTC', field: 'montant',editable : true,sortable: true, filter: true,resizable: true,flex : 1},
 	];
-
   rowData = [];
   imprimFacture(){
     this.printService.printDocument("facture",['1']);

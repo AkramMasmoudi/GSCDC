@@ -1,4 +1,4 @@
-import { FactureComponent } from './print-layout/facture/facture.component';
+import { FactureLayoutComponent } from './print-layout/facture-layout/facture-layout.component';
 import { PrintLayoutComponent } from './print-layout/print-layout.component';
 import { ParametrageComponent } from './parametrage/parametrage.component';
 import { BonDeLivraisonFournisseurComponent } from './bon-de-livraison-fournisseur/bon-de-livraison-fournisseur.component';
@@ -18,9 +18,6 @@ import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
-    path: '',
-    component : AuthComponent,
-  },{
     path: 'Client',
     component : ClientComponent,
     canActivate : [AuthGuard]
@@ -65,10 +62,13 @@ const routes: Routes = [
     outlet: 'print',
     component: PrintLayoutComponent,
     children: [
-      { path: 'facture/:factureIds', component: FactureComponent }
+      { path: 'facture/:factureIds', component: FactureLayoutComponent }
     ]
   },{
     path: '**', 
+    component: AuthComponent
+  },{
+    path: '', 
     component: AuthComponent
   }
 ];

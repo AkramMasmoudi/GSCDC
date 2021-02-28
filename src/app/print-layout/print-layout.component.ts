@@ -1,3 +1,4 @@
+import { Config } from './../config';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./print-layout.component.css']
 })
 export class PrintLayoutComponent implements OnInit {
-
+  logoUrl = Config.logoUrl;
+  address = Config.adressEntreprise;
+  desc = Config.descEntreprise;
+  name = Config.nomEntreprise;
+  tel = Config.telEntreprise;
+  email = Config.emailEntreprise;
+  today = new Date();
   constructor() { }
   typeDoc = "facture";
   ngOnInit(): void {

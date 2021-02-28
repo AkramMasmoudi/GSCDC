@@ -19,6 +19,12 @@ $bar-padding2: 90px;
     .isPrinting app-print-layout {
         display: block;
     }
+    @page {
+        size: auto;
+        /* auto is the initial value */
+        margin: 0;
+        /* this affects the margin in the printer settings */
+    }
 }
 
 body {

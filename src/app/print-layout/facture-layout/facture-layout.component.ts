@@ -3,11 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { PrintService } from 'src/app/services/print.service';
 
 @Component({
-  selector: 'app-facture',
-  templateUrl: './facture.component.html',
-  styleUrls: ['./facture.component.css']
+  selector: 'app-facture-layout',
+  templateUrl: './facture-layout.component.html',
+  styleUrls: ['./facture-layout.component.css']
 })
-export class FactureComponent implements OnInit {
+export class FactureLayoutComponent implements OnInit {
 
   invoiceIds: string[];
   invoiceDetails: Promise<any>[];
@@ -30,4 +30,5 @@ export class FactureComponent implements OnInit {
       setTimeout(() => resolve({amount}), 1000)
     );
   }
+
 }

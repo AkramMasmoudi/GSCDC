@@ -2,7 +2,9 @@
 .header-space,
 .footer,
 .footer-space {
-    height: 100px;
+    height: auto;
+    padding: 20px;
+    background-color: white;
 }
 
 .header {
@@ -14,6 +16,24 @@
     position: fixed;
     bottom: 0;
 }
+
+.right-footer img {
+    width: 145px;
+    height: 145px;
+}
+
+.right-footer div.desc-bloc {
+    width: calc(100vw - 380px);
+}
+
+.left-footer .factureTitre {
+    color: darkslategrey;
+}
+
+
+/*.body {
+    margin-top: 200px;
+}*/
 
 @media screen {
      :host {
